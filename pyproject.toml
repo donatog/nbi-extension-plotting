@@ -3,7 +3,7 @@ requires = ["hatchling>=1.5.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nbi_extension_example"
+name = "nbi_extension_plotting"
 version = "0.1.0"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -25,6 +25,7 @@ classifiers = [
 ]
 dependencies = [
     "notebook-intelligence>=1.0.0",
+    "vizro",
     "matplotlib"
 ]
 dynamic = ["description", "authors", "urls", "keywords"]
@@ -33,7 +34,7 @@ dynamic = ["description", "authors", "urls", "keywords"]
 exclude = [".github"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"extension.json" = "share/jupyter/nbi_extensions/nbi_extension_example/extension.json"
+"extension.json" = "share/jupyter/nbi_extensions/nbi_extension_plotting/extension.json"
 
 [tool.check-wheel-contents]
 ignore = ["W002"]
